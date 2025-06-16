@@ -26,9 +26,9 @@ public class Driver : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, 0.1f);
-        transform.Translate(0.01f, 0, 0); // Move right continuously, increasing x position over time
+        transform.Translate(0, 0.01f, 0); // Move up continuously, increasing y position over time
 
-        // transform.Translate(0, 0.01f, 0); // Move up continuously, increasing y position over time
+        // transform.Translate(0.01f, 0, 0); // Move right continuously, increasing x position over time
         // transform.Translate(0.1f, 0.01f, 0); // Move diagonally continuously, increasing both x and y positions over time
     }
 }
