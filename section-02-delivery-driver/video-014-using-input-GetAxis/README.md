@@ -49,7 +49,11 @@ float steerAmount = Input.GetAxis("Horizontal") * steerSpeed;
 
 ### Accelerate and Deccelerate the Car
 
-Create a new variable in `Update()` called `moveAmount` of type `float`. Use `Input.GetAxis()` and pass `"Vertical"` as the argument. Similar to the example above, multiple the value of `moveAmount` by `moveSpeed`, and then replace `moveSpeed` in `transform.Translate()` with `moveAmount`. This will allow you to use your keys to accelerate and deccelerate the car.
+Create a new variable in `Update()` called `moveAmount` of type `float`.
+
+Use `Input.GetAxis()` and pass `"Vertical"` as the argument.
+
+Similar to the example above, multiple the value of `moveAmount` by `moveSpeed`, and then replace `moveSpeed` in `transform.Translate()` with `moveAmount`. This will allow you to use your keys to accelerate and deccelerate the car.
 
 ```c#
 float moveAmount = Input.GetAxis("Vertical") * moveSpeed;
@@ -67,3 +71,32 @@ In this course, we'll use the 'old' system as it's easier to understand. Later o
 #### Input System
 
 An input system converts the player's physical actions (e.g., button press, key press, etc.) into information for the game.
+
+## Code Snippets
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Driver : MonoBehaviour
+{
+    [SerializeField] float steerSpeed = 1f;
+    [SerializeField] float moveSpeed = 0.01f;
+
+    void Start()
+    {
+        Debug.Log("You don't make friends with salad!");
+    }
+
+    void Update()
+    {
+        float steerAmount = Input.GetAxis("Horizontal") * steerSpeed;
+        float moveAmount = Input.GetAxis("Vertical") * moveSpeed;
+
+        transform.Rotate(0, 0, -steerAmount);
+        transform.Translate(0, moveAmount, 0);
+    }
+}
+
+```
