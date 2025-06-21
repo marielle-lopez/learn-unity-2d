@@ -28,5 +28,14 @@ This can be done by using empty game objects.
 ## Adding Box Colliders to the World Objects
 
 1. You can select multiple objects in the scene, in this case, houses, and then in the 'Inspector' panel, click the 'Add Component' button at the bottom. Search for 'Box Collider 2D'. This will add a box collider around the house assets.
+2. Edit the boundaries of the collider components by clicking the 'Edit Collider' button, and then use the handles to re-shape it.
 
 Add any differently-shaped colliders to different assets to ensure your world objects cannot be moved if the player bumps into them.
+
+## Snap Objects to the Grid
+
+Optionally, you can make objects snap to the grid by clicking the 'Global' button at the top and then the symbol with the magnet and grid.
+
+## Change Camera Colour
+
+At the moment, the background of the game is blue. This is set by the 'Main Camera' object. Select it and in the 'Inspector' panel, you'll see the 'Background' option. Choose whatever colour you wish to replace the blue if you'd like.
